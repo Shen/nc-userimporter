@@ -1,10 +1,10 @@
-# nc-userimporter
+# About nc-userimporter
 This tool creates Nextcloud users from a CSV file, which you exported from some other software or created with a spreadsheet software.
 
 Zip files with executables for Windows, MacOS, Linux available here: https://get.edudocs.org/de/assets/nc-userimporter/ - If you have a Python3 environment with all the dependencies/modules installed, you can run the script without the build of course.
 
-Screenshot:
-![Screenshot from Windows commandline](https://github.com/t-markmann/nc-userimporter/blob/master/screenshot.png)
+Screenshot input:
+![Screenshot from Windows commandline](https://github.com/t-markmann/nc-userimporter/blob/master/assets/screenshot.png)
 
 ## Instructions
 
@@ -29,18 +29,23 @@ Screenshot:
 4. Follow the interactive commandline instructions. Check output.log and your user overview in Nextcloud.
 
 
+## Output
+
+Screenshot output:
+
+![Generated PDF file with user credentials](https://github.com/t-markmann/nc-userimporter/blob/master/assets/screenshot_pdfoutput.png)
+
 ---
 
 ## ToDo
 
+* improve documentation of features https://github.com/t-markmann/nc-userimporter/wiki#todo-documentation
+* refactoring / clean code
+
 Open features, not yet implemented (help appreciated): 
 * Passwords with special characters not supported?
-* DEV/TEST: accept empty password-fields, if e-mail adress is given (password-link will be sent to new users.)
 * Accept self-signed certificates, with a warning for the user. Like: https://github.com/cloudfoundry-community/cf-python-client/issues/51#issuecomment-536428838
-* generate QR Codes for Login into Nextcloud-App (integrated QR Code Scanner). Pattern: nc://login/user:[[username]]&password:[[password]]&server:https://[[URL]] Output: PDF file?
 * read config from CLI-input if config-file is empty; update config.xml with input values?
 * ask if users exists first: https://docs.nextcloud.com/server/15/admin_manual/configuration_user/instruction_set_for_users.html
 * add language (not necessary because of default/browser language?)
 * add other userdata
-* ask if new groups should be created if necessary
-
